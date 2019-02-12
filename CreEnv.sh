@@ -87,7 +87,7 @@ if [ $(($step_parameter/$step_weight)) -ne 0 ]; then
     --filter-on='*' >> ~/eos/log/nodeos.log 2>&1 &
 
     echo "nodeos outputs:"
-    tail -f 20 ~/eos/log/nodeos.log
+    tail ~/eos/log/nodeos.log -n 20
 else
     echo "Step 3: Do not execute"
 fi
@@ -108,7 +108,7 @@ if [ $(($step_parameter/$step_weight)) -ne 0 ]; then
     else
         read -p "Please input the location: " source_location
         echo "Download from Online source..."
-    wget "${source_location}eosio_1.5.0-1-ubuntu-18.04_amd64.deb" \
+    wget "${source_location}eosio.cdt-1.4.1.x86_64.deb" \
     && echo "CDT Package downloaded" || echo "Unable to download CDT Package"
     fi
 else
