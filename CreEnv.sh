@@ -1,6 +1,7 @@
 # Create keosd & nodeos Environment
 # Author: Kumo Lam
-# History: Feb/12/2019 Created
+# History: Feb/16/2019 Updated.
+# Mark: Add some reminders.
 
 echo "CreEnv Script: to create keosd and nodeos environment on your device."
 
@@ -34,6 +35,7 @@ step_weight=$(($step_weight/2))
 echo "Step Parameter: ${step_parameter}; Step Weight:${step_weight}"
 
 # Step 6
+# Need to kill apt when there is an error.
 if [ $(($step_parameter/$step_weight)) -ne 0 ]; then
     echo "Step 6: Execute the installation"
 
@@ -63,6 +65,7 @@ step_weight=$(($step_weight/2))
 echo "Step Parameter: ${step_parameter}; Step Weight:${step_weight}"
 
 # Step 4
+# Need to exit from the outputs.
 if [ $(($step_parameter/$step_weight)) -ne 0 ]; then
     echo "Step 4: Run keosd"
 
