@@ -1,6 +1,7 @@
 # Create Walltes & Accounts for development
 # Author: Kumo Lam
-# History: Feb/13/2019 Created
+# History: Feb/16/2019 Updated
+# Mark: Add some reminders.
 
 echo "CreAcc.sh: Create Wallets and Accounts"
 
@@ -8,6 +9,7 @@ read -p "Do you want to create a new wallet?(Y/N): " new_wallet_flag
 read -p "Name of the wallet(required in each mode): " wallet_name
 
 # Create wallet
+# Need to set a automatic creaction for wallet&account folder.
 if [ "$new_wallet_flag" = "Y" -o "$new_wallet_flag" = "y" ]; then
     touch ~/eos/wallet/"${wallet_name}.wallet.key"
 
@@ -34,6 +36,7 @@ else
 fi
 
 # Create accounts
+# Need to add more actions.
 while [ 0 -eq 0 ]
 do
     read -p "Name of the account(end to exit):" account_name
